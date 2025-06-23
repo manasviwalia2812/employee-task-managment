@@ -1,5 +1,3 @@
-localStorage.clear()
-
 const employees = [
   {
     id: 1,
@@ -9,13 +7,13 @@ const employees = [
     taskCount: {
       active: 1,
       newTask: 1,
-      completed: 1,
+      completed: 0,
       failed: 1
     },
     tasks: [
       {
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false,
         title: "Prepare sales report",
@@ -25,8 +23,8 @@ const employees = [
       },
       {
         active: false,
-        newTask: false,
-        completed: true,
+        newTask: true,
+        completed: false,
         failed: false,
         title: "Client feedback",
         description: "Collect and document feedback from client X.",
@@ -52,7 +50,7 @@ const employees = [
     password: "123",
     taskCount: {
       active: 2,
-      newTask: 1,
+      newTask: 0,
       completed: 1,
       failed: 1
     },
@@ -89,7 +87,7 @@ const employees = [
       },
       {
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false,
         title: "Logo revisions",
@@ -105,14 +103,14 @@ const employees = [
     email: "employee3@example.com",
     password: "123",
     taskCount: {
-      active: 2,
+      active: 1,
       newTask: 2,
-      completed: 2,
+      completed: 1,
       failed: 1
     },
     tasks: [
       {
-        active: true,
+        active: false,
         newTask: true,
         completed: false,
         failed: false,
@@ -143,8 +141,8 @@ const employees = [
       },
       {
         active: false,
-        newTask: false,
-        completed: true,
+        newTask: true,
+        completed: false,
         failed: false,
         title: "Password policy update",
         description: "Implemented stronger password requirements.",
@@ -153,7 +151,7 @@ const employees = [
       },
       {
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false,
         title: "Install antivirus",
@@ -169,14 +167,14 @@ const employees = [
     email: "employee4@example.com",
     password: "123",
     taskCount: {
-      active: 1,
+      active: 0,
       newTask: 1,
       completed: 1,
       failed: 1
     },
     tasks: [
       {
-        active: true,
+        active: false,
         newTask: true,
         completed: false,
         failed: false,
@@ -213,15 +211,15 @@ const employees = [
     email: "employee5@example.com",
     password: "123",
     taskCount: {
-      active: 2,
-      newTask: 2,
+      active: 1,
+      newTask: 1,
       completed: 1,
       failed: 1
     },
     tasks: [
       {
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false,
         title: "Marketing campaign",
@@ -250,7 +248,7 @@ const employees = [
         category: "Marketing"
       },
       {
-        active: true,
+        active: false,
         newTask: true,
         completed: false,
         failed: false,
