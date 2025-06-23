@@ -12,12 +12,22 @@ const App = () => {
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem('loggedInUser');
-    if (loggedInUser) {
-      const userData = JSON.parse(loggedInUser);
-      setUser(userData.role);
-      setLoggedInUserData(userData.data);
+
+    if (loggedInUser && userData) {
+      const parsed = JSON.parse(loggedInUser);
+
+      if (parsed.role === 'admin') {
+        setUser('admin');
+      } else if (parsed.role === 'employee') {
+        const freshEmployee = userData.find(emp => emp.email === parsed.data.email);
+        setUser('employee');
+        setLoggedInUserData(freshEmployee);
+      }
     }
-  }, []);
+  }, [userData]);  // 🔁 Update when employee list changes
+
+
+
 
   const handleLogin = (email, password) => {
     if (email === 'user@me.com' && password === '123') {
